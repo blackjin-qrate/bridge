@@ -20,7 +20,7 @@ function mo_chk() {
 }
 
 
-function action_app_ziggam(android_url , ios_url , ios_appstore_url){
+function action_app_ziggam(android_url, google_store_url, ios_url, ios_appstore_url) {
 	var result_mo_chk = mo_chk();
 
 	if(result_mo_chk!="pc"){
@@ -32,7 +32,11 @@ function action_app_ziggam(android_url , ios_url , ios_appstore_url){
 
 			location.href = ios_url;
 		}
-		else{
+		else {
+			setTimeout( function() {
+				window.open(google_store_url);
+			}, 250);
+			
 			location.href = android_url;
 		}
 	}
@@ -42,7 +46,7 @@ function action_app_ziggam(android_url , ios_url , ios_appstore_url){
 
 <html>
     <body>
-        <span onclick="action_app_ziggam('ziggam://eventcorplist?bnrSn=20200914298;package=kr.qrate.ziggam;scheme=ziggam;end', 'ziggam://eventcorplist?bnrSn=20200914298', 'itms-apps://itunes.apple.com/kr/app/id1450398047')">
+        <span onclick="action_app_ziggam('ziggam://eventcorplist?bnrSn=20200914298;package=kr.qrate.ziggam;scheme=ziggam;end', 'http://play.google.com/store/apps/details?id=kr.qrate.ziggam', 'ziggam://eventcorplist?bnrSn=20200914298', 'itms-apps://itunes.apple.com/kr/app/id1450398047')">
 		<font size="80" color="cyan">Ziggam App 실행</font>
         </span>
     </body>
