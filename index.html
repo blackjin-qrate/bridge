@@ -31,10 +31,10 @@ function action_app_ziggam(android_url , ios_url , ios_appstore_url){
 				window.open(ios_appstore_url);
 			}, 1000);
 
-			location.href = ios_url;
+			window.location.href = ios_url;
 		}
 		else{
-			location.href = android_url;
+			window.location.href = android_url;
 		}
 	}
 }
