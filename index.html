@@ -1,17 +1,16 @@
 <script>
-function mo_chk(){
-
+function mo_chk() {
 	var os;
-
 	var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));	 
 
 	if (mobile) {
 		var userAgent = navigator.userAgent.toLowerCase();
-		if (userAgent.search("android") > -1){
+		if (userAgent.search("android") > -1) {
 			return os = "android";
-		}else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1) || (userAgent.search("ipad") > -1)){
+		} else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1) || (userAgent.search("ipad") > -1)){
 			return os = "ios";
-		}else{
+		}
+		else {
 			return os = "otehr";
 		}
 
@@ -43,7 +42,7 @@ function action_app_ziggam(android_url , ios_url , ios_appstore_url){
 
 <html>
     <body>
-        <span onclick="action_app_ziggam('ziggam://eventcorplist?bnrSn=20200914298/#Intent;package=kr.qrate.ziggam;scheme=https;end', 'ziggam://eventcorplist?bnrSn=20200914298', 'itms-apps://itunes.apple.com/kr/app/id1450398047')">
+        <span onclick="action_app_ziggam('ziggam://eventcorplist?bnrSn=20200914298/#Intent;package=kr.qrate.ziggam;scheme=ziggam;end', 'ziggam://eventcorplist?bnrSn=20200914298', 'itms-apps://itunes.apple.com/kr/app/id1450398047')">
 		<font size="90" color="purple">Ziggam App 실행</font>
         </span>
     </body>
