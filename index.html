@@ -29,10 +29,11 @@ function action_app_ziggam(android_url , ios_url , ios_appstore_url){
 
 			setTimeout( function() {
 				window.open(ios_appstore_url);
-			}, 3000);
+			}, 1000);
 
 			location.href = ios_url;
-		}else{
+		}
+		else{
 			location.href = android_url;
 		}
 	}
@@ -43,7 +44,7 @@ function action_app_ziggam(android_url , ios_url , ios_appstore_url){
 <html>
     <body>
         <span onclick="action_app_ziggam('ziggam://eventcorplist?bnrSn=20200914298/#Intent;package=kr.qrate.ziggam;scheme=https;end', 'ziggam://eventcorplist?bnrSn=20200914298', 'https://itunes.apple.com/kr/app/id1450398047')">
-		<font size="70" color="red">Ziggam App 실행</font>
+		<font size="70" color="green">Ziggam App 실행</font>
         </span>
     </body>
 </html>
