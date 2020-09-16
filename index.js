@@ -36,7 +36,7 @@ const openApp = function() {
 	
 	//window.location.replace('ziggam://eventcorplist?bnrSn=20200914298')
 	var callUrl = "ziggam://eventcorplist?" + params
-	window.href = callUrl
+	location.href = callUrl
 	
 	if (osChk != "pc") {
 		if (osChk == "ios") {
