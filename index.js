@@ -34,7 +34,7 @@ const openApp = function() {
 	
 	var params = window.location.search.substr(window.location.search.indexOf("?") + 1);
 	
-<!--	window.location.replace('ziggam://eventcorplist?bnrSn=20200914298')	-->
+	//window.location.replace('ziggam://eventcorplist?bnrSn=20200914298')
 	window.location.replace('ziggam://eventcorplist?' + params)
 	
 	if (osChk != "pc") {
