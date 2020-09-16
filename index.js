@@ -36,25 +36,15 @@ const openApp = function() {
 	
 	//window.location.replace('ziggam://eventcorplist?bnrSn=20200914298')
 	var callUrl = "ziggam://eventcorplist?" + params
+	window.href = callUrl
 	
-	var clickedAt = +new Date;
-
 	if (osChk != "pc") {
-		naverAppCheckTimer = setTimeout(function() {
-			if (+new Date - clickedAt < 2000) {
-			    if (window.confirm("직감 앱이 설치되어 있지 않습니다.   \n설치페이지로 이동하시겠습니까?")) {
-				    if (osChk == "ios") {
-						goToAppStore();
-					}
-					else {
-						goToPlayStore();
-					}
-			    }
-			}
-		}, 1500);
-	
-location.replace(callUrl)
-		
+		if (osChk == "ios") {
+			setTimeout(goToAppStore, 500);
+		}
+		else {
+			setTimeout(goToPlayStore, 500);
+		}
 	}
 };
 
