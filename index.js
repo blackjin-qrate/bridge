@@ -1,5 +1,6 @@
 const goToPlayStore = function() {
-	window.location.replace('http://play.google.com/store/apps/details?id=kr.qrate.ziggam');
+	// window.location.replace('http://play.google.com/store/apps/details?id=kr.qrate.ziggam');
+	window.location.replace('market://details?id=kr.qrate.ziggam');
 };
 
 const goToAppStore = function() {
