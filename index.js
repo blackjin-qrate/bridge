@@ -55,7 +55,8 @@ const openApp = function() {
 			}, 0);
 		}
 		else {
-			location.href = "Intent://" + callUrl + "#Intent;scheme=ziggam;package=kr.qrate.ziggam;end"
+			var andParams = "eventcorplist?" + params
+			location.href = "Intent://" + andParams + "#Intent;scheme=ziggam;package=kr.qrate.ziggam;end"
 // 			setTimeout(goToPlayStore, 500);
 		}
 	}
