@@ -1,9 +1,15 @@
-<!--
 <script>
+const goToPlayStore = function() {
+	// window.location.replace('http://play.google.com/store/apps/details?id=kr.qrate.ziggam');
+	window.location.replace('market://details?id=kr.qrate.ziggam');
+};
+
+const goToAppStore = function() {
+	window.location.replace('itms-apps://itunes.apple.com/kr/app/id1450398047');
+};
 function mo_chk() {
 	var os;
 	var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));	 
-
 	if (mobile) {
 		var userAgent = navigator.userAgent.toLowerCase();
 		if (userAgent.search("android") > -1) {
@@ -15,16 +21,29 @@ function mo_chk() {
 		else {
 			return os = "otehr";
 		}
-
 	}
 	else {
 		return os = "pc";
 	}
 }
 
+const openApp = function() {
+	var osChk = mo_chk();
+	
+	window.location.replace('ziggam://eventcorplist?bnrSn=20200914298')	
+	
+	if (osChk != "pc") {
+		if (osChk == "ios") {
+			setTimeout(goToAppStore, 250);
+		}
+		else {
+			setTimeout(goToPlayStore, 250);
+		}
+	}
+};
+
 function action_app_ziggam(android_url, google_store_url, ios_url, ios_appstore_url) {
 	var result_mo_chk = mo_chk();
-
 	if (result_mo_chk!="pc") {
 		var startTime = +new Date();
 
@@ -55,20 +74,18 @@ function action_app_ziggam(android_url, google_store_url, ios_url, ios_appstore_
 	}
 }
 </script>
-
-
 <html>
     <body>
-		<span onclick="action_app_ziggam('ziggam://eventcorplist?bnrSn=20200914298',
+		<span onclick="openApp()">
+		<!-- <span onclick="action_app_ziggam('ziggam://eventcorplist?bnrSn=20200914298',
 		 'http://play.google.com/store/apps/details?id=kr.qrate.ziggam',
-		  'ziggam://eventcorplist?bnrSn=20200914298', 'itms-apps://itunes.apple.com/kr/app/id1450398047')">
+		  'ziggam://eventcorplist?bnrSn=20200914298', 'itms-apps://itunes.apple.com/kr/app/id1450398047')"> -->
 		<font size="80" color="green">Ziggam App 실행</font>
         </span>
     </body>
 </html>
--->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -78,4 +95,5 @@ function action_app_ziggam(android_url, google_store_url, ios_url, ios_appstore_
 <body>
   <script src="./index.js"></script>  
 </body>
-</html>
+</html> -->
+
