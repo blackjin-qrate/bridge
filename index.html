@@ -30,7 +30,7 @@ function action_app_ziggam(android_url, google_store_url, ios_url, ios_appstore_
 		setTimeout (
 			function() {
 				var now = +new Date();
-				if (now - startTime < 1000) {
+				if (now - startTime < 2000) {
 					var marketUrl = "";
 
 					if (result_mo_chk == "ios") {
@@ -43,7 +43,7 @@ function action_app_ziggam(android_url, google_store_url, ios_url, ios_appstore_
 					location.href = marketUrl;
 				}
 			}
-		, 2000)
+		, 1000)
 
 		if (result_mo_chk == "ios") {
 			location.href = ios_url;
