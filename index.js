@@ -36,10 +36,10 @@ const openApp = function() {
 	
 	if (osChk != "pc") {
 		if (osChk == "ios") {
-			setTimeout(goToAppStore, 250);
+			setTimeout(goToAppStore, 500);
 		}
 		else {
-			setTimeout(goToPlayStore, 250);
+			setTimeout(goToPlayStore, 500);
 		}
 	}
 };
