@@ -35,14 +35,19 @@ const openApp = function() {
 	var params = window.location.search.substr(window.location.search.indexOf("?") + 1);
 	
 	//window.location.replace('ziggam://eventcorplist?bnrSn=20200914298')
-	var callUrl = "ziggam://eventcorplist?" + params
-	location.href = callUrl
+	var callUrl = "ziggam://eventcorplist?" + params;
+// 	location.href = callUrl
 	
 	if (osChk != "pc") {
 		if (osChk == "ios") {
-			setTimeout(goToAppStore, 500);
+			setTimeout(goToAppStore, 2500);
+			
+			setTimeout( function() {
+				location.href = callUrl;
+			}, 0);
 		}
 		else {
+			location.href = callUrl
 			setTimeout(goToPlayStore, 500);
 		}
 	}
