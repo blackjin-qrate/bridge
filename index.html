@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 const goToPlayStore = function() {
 	// window.location.replace('http://play.google.com/store/apps/details?id=kr.qrate.ziggam');
 	window.location.replace('market://details?id=kr.qrate.ziggam');
@@ -30,7 +30,7 @@ function mo_chk() {
 const openApp = function() {
 	var osChk = mo_chk();
 	
- 	<!-- window.location.replace('ziggam://eventcorplist?bnrSn=20200914298') -->
+ 	window.location.replace('ziggam://eventcorplist?bnrSn=20200914298')
 	window.location.replace('ziggam://recruitdetail?entpmemno=E2020082602188&recruitsn=2020093323')
 	
 	if (osChk != "pc") {
@@ -78,15 +78,15 @@ function action_app_ziggam(android_url, google_store_url, ios_url, ios_appstore_
 <html>
     <body>
 		<span onclick="openApp();">
-		<!-- <span onclick="action_app_ziggam('ziggam://eventcorplist?bnrSn=20200914298',
+		<span onclick="action_app_ziggam('ziggam://eventcorplist?bnrSn=20200914298',
 		 'http://play.google.com/store/apps/details?id=kr.qrate.ziggam',
-		  'ziggam://eventcorplist?bnrSn=20200914298', 'itms-apps://itunes.apple.com/kr/app/id1450398047')"> -->
+		  'ziggam://eventcorplist?bnrSn=20200914298', 'itms-apps://itunes.apple.com/kr/app/id1450398047')">
 		<font size="80" color="red">Ziggam App 실행</font>
         </span>
     </body>
-</html>
+</html> -->
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -96,5 +96,5 @@ function action_app_ziggam(android_url, google_store_url, ios_url, ios_appstore_
 <body>
   <script src="./index.js"></script>  
 </body>
-</html> -->
+</html>
 
