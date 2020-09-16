@@ -32,7 +32,10 @@ function mo_chk() {
 const openApp = function() {
 	var osChk = mo_chk();
 	
-	window.location.replace('ziggam://eventcorplist?bnrSn=20200914298')	
+	var params = window.location.search.substr(window.location.search.indexOf("?") + 1);
+	
+<!--	window.location.replace('ziggam://eventcorplist?bnrSn=20200914298')	-->
+	window.location.replace('ziggam://eventcorplist?' + params)
 	
 	if (osChk != "pc") {
 		if (osChk == "ios") {
