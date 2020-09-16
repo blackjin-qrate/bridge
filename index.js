@@ -1,10 +1,12 @@
 const goToPlayStore = function() {
-	location.replace('http://play.google.com/store/apps/details?id=kr.qrate.ziggam');
+// 	location.replace('http://play.google.com/store/apps/details?id=kr.qrate.ziggam');
+	location.href = "http://play.google.com/store/apps/details?id=kr.qrate.ziggam";
 	//window.location.replace('market://details?id=kr.qrate.ziggam');
 };
 
 const goToAppStore = function() {
-	location.replace('itms-apps://itunes.apple.com/kr/app/id1450398047');
+// 	location.replace('itms-apps://itunes.apple.com/kr/app/id1450398047');
+	location.href = "itms-apps://itunes.apple.com/kr/app/id1450398047";
 };
 
 function mo_chk() {
@@ -30,6 +32,7 @@ function mo_chk() {
 }
 
 const openApp = function() {
+	var visitedAt = (new Date()).getTime();	// 방문 시간
 	var osChk = mo_chk();
 	
 	var params = window.location.search.substr(window.location.search.indexOf("?") + 1);
@@ -40,15 +43,20 @@ const openApp = function() {
 	
 	if (osChk != "pc") {
 		if (osChk == "ios") {
-			setTimeout(goToAppStore, 2500);
+			setTimeout( function() {
+				if ((new Date()).getTime() - visitedAt < 2000) {
+					goToAppStore();
+				}
+			}, 500);
+// 			setTimeout(goToAppStore, 2500);
 			
 			setTimeout( function() {
 				location.href = callUrl;
 			}, 0);
 		}
 		else {
-			location.href = callUrl
-			setTimeout(goToPlayStore, 500);
+			location.href = "Intent://" + callUrl + "#Intent;scheme=ziggam;package=kr.qrate.ziggam;end"
+// 			setTimeout(goToPlayStore, 500);
 		}
 	}
 };
