@@ -1,10 +1,10 @@
 const goToPlayStore = function() {
-	window.location.replace('http://play.google.com/store/apps/details?id=kr.qrate.ziggam');
+	location.replace('http://play.google.com/store/apps/details?id=kr.qrate.ziggam');
 	//window.location.replace('market://details?id=kr.qrate.ziggam');
 };
 
 const goToAppStore = function() {
-	window.location.replace('itms-apps://itunes.apple.com/kr/app/id1450398047');
+	location.replace('itms-apps://itunes.apple.com/kr/app/id1450398047');
 };
 
 function mo_chk() {
@@ -35,7 +35,7 @@ const openApp = function() {
 	var params = window.location.search.substr(window.location.search.indexOf("?") + 1);
 	
 	//window.location.replace('ziggam://eventcorplist?bnrSn=20200914298')
-	window.location.replace('ziggam://eventcorplist?' + params)
+	location.replace('ziggam://eventcorplist?' + params)
 	
 	if (osChk != "pc") {
 		if (osChk == "ios") {
